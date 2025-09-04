@@ -58,16 +58,21 @@ export function Hero() {
                 </div>
 
                 {/* Right Side - Picture */}
-                <div className="relative group -mt-14 -translate-x-20 bg-transparent">
-                    <Image
-                        src="/me.png"
-                        alt="Usman Ali Ashraf"
-                        width={375}
-                        height={375}
-                        className="rounded-2xl shadow-2xl group-hover:scale-105 transition-transform duration-500 mix-blend-normal" 
-                        priority
-                    />
-                </div>
+<div className="relative group -mt-14 -translate-x-4 bg-transparent rounded-2xl overflow-hidden">
+  <Image
+    src="/me.png"
+    alt="Usman Ali Ashraf"
+    width={375}
+    height={375}
+    className="rounded-2xl shadow-2xl group-hover:scale-105 transition-transform duration-500 mix-blend-normal"
+    style={{
+      maskImage: 'radial-gradient(circle, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%)',
+      WebkitMaskImage: 'radial-gradient(circle, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%)'
+    }}
+    priority
+  />
+</div>
+
 
             </div>
         </section>
