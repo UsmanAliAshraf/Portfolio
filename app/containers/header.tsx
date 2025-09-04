@@ -59,7 +59,7 @@ export function Header()
             <div className="relative container flex items-center justify-between">
   {/* Left side: Logo + Header Links */}
   <div className="flex gap-12 items-center">
-    <div>
+    <div className="w-24 h-24">
       <Image src={Logo} alt="Logo" />
     </div>
 
