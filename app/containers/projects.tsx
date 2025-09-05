@@ -40,7 +40,7 @@ const projects: IProject[] = [
         title: 'Campus Connect and Navigation',
         description: 'DSA-powered app for efficient campus navigation at UET.',
         github: 'https://github.com/UsmanAliAshraf/CampusNavigation-and-EventManager',
-        //linkedin: '#'
+        linkedin: 'https://www.linkedin.com/posts/usmanaleeashraff_dsa-campusconnect-activity-7369663375724670976-b4SL?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF31ZvgB-Rk-OBrgk1PPrNq8xtfk_m-Xi4Q'
     },
        
     {
