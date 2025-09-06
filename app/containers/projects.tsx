@@ -33,7 +33,7 @@ const projects: IProject[] = [
         title: 'Mangodb - Document Database',
         description: 'Custom DB with storage, indexing, query processing, and ACID',
         github: 'https://github.com/UsmanAliAshraf/Mini-MongoDB-Flask-App',
-        //linkedin: '#'
+        linkedin: 'https://www.linkedin.com/posts/usmanaleeashraff_day-3-of-one-project-a-day-decided-to-reinvent-ugcPost-7370033038182780928-oExl?utm_source=share&utm_medium=member_desktop'
     },
     {
         video: 'cc.mp4',
