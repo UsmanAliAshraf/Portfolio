@@ -26,7 +26,7 @@ const projects: IProject[] = [
         title: 'ochi.design',
         description: 'Cloned the website ochi.design in ReactJS and TailwindCSS',
         github: 'https://github.com/UsmanAliAshraf/React-Project-Ochie-Clone-',
-        //linkedin: '#'
+        linkedin: 'https://www.linkedin.com/posts/usmanaleeashraff_okay-so-day-4-i-got-bored-working-on-backend-ugcPost-7370464078500110336-HKc7?utm_source=share&utm_medium=member_desktop'
     },
     {
         video: 'mangodb.mp4',
