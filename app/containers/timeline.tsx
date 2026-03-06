@@ -23,17 +23,17 @@ const educationTimeline = [
 const experienceTimeLine = [
     {
         duration : '2023 - Current',
-        title: 'Freelance Software Engineer',
+        title: 'Full Stack Software Engineer',
         desc: 'Fiverr Seller'
     },
     {
         duration: '2025 - Current',
-        title: 'AI Chatbot and Automation Developer',
+        title: 'AI and Saas Developer',
         desc: 'Fiverr Seller'
     },
     {
         duration: '2024',
-        title: 'Frontend Developer Intern',
+        title: 'Software Engineer Intern',
         desc: 'YoungDev Interns'
     }
 ];

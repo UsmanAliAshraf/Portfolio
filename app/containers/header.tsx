@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Logo from "@/public/logo.svg";
 import fiverr from "@/public/fiverr-icon.svg";
+import Upwork from "@/public/upwork-icon.svg";
 import Image from "next/image";
 import Link from "next/link";
 import { BsGithub, BsLinkedin, BsTwitterX, BsX } from "react-icons/bs";
@@ -33,6 +34,12 @@ const socialLinks = [
         label: 'Fiverr',
         slug: 'https://www.fiverr.com/startupbyusman'
     },
+    {
+        Icon: () => <Image src={Upwork} alt="Upwork" width={30} height={30} />,
+        label: 'Upwork',
+        slug: 'https://www.upwork.com/freelancers/~01d402fcc22c25c91a'
+    },
+    
     {
         Icon: BsGithub,
         label: 'Github',

@@ -1,38 +1,34 @@
 import { Title } from "../components/title";
 
 const skills = [
-    {
-        title: 'Frontend Development',
-        desc: 'CSS Frameworks like Tailwind, Bootstrap, SCSS along with Modern Javascript Frameworks like react. Understanding of metaframeworks like Next, SEO and SSG, SSR, CSR, ISR, hydration, islands and other web rendering techniques.'
-    },
-    {
-        title: 'Backend Development',
-        desc: 'NodeJS, Express, Flask, Fast API, working with template engines, databases from NoSQL to SQL; mongodb,  mySQL, sQLServer, postgreSQL, API Integration, JWT Authentication along with socket real-time connection.'
-    },
-    {
-        title: 'Desktop Development',
-        desc: 'Native Windows DevTools from .NET Development, Universal Windows Platform, Windows Forms (Winforms). Understanding of  Windows Presentation Foundation (WPF) etc'
-    },
-    {
-        title: 'AI Chatbot Development',
-        desc: ' AI chatbot dev with LangChain, LangGraph, RAG, Agno to hybrid like Botpress (low-code).'
-    },
-    {
-        title: '2D Game Development',
-        desc: 'Understanding of Unity Framework, and how these frameworks are made, from collision detection, culling to handling physics of game objects.'
-    },
-    {
-        title: 'Python Automation',
-        desc: 'Python automation with scripting, web scraping, task scheduling, APIs, and orchestration tools like Airflow.'
-    },
-    {
-        title: 'Agentic AI',
-        desc: 'Agentic AI with LangChain, LangGraph, tools integration, memory management, and autonomous multi-step workflows.'
-    },
-    {
-        title: 'Business Development',
-        desc: 'Managing freelance marketplace accounts to generate leads, write winning proposals, and secure projects. Skilled in client communication, negotiation, and building long-term partnerships for consistent business growth.'
-    }
+{
+    title: 'Full-Stack Web Development',
+    desc: 'Expert in building web apps using modern JS frameworks like React, Next.js, and Vue. Skilled with CSS frameworks (Tailwind, Bootstrap, SCSS), SEO, SSR/CSR/ISR, SSG, hydration, islands architecture, and API integrations.'
+},
+{
+    title: 'Mobile App Development',
+    desc: 'Building cross-platform mobile apps with React Native & Flutter. Experienced in state management, native integrations, performance optimization, and app deployment to Play Store & App Store.'
+},
+{
+    title: 'AI & Chatbot Development',
+    desc: 'Developing intelligent AI chatbots using LangChain, LangGraph, RAG pipelines, low-code tools like Botpress. Includes memory management, tool integration, and autonomous multi-step workflows.'
+},
+{
+    title: 'SaaS & Backend Development',
+    desc: 'Designing scalable SaaS platforms with NodeJS, Express, FastAPI, Flask. Skilled in SQL/NoSQL databases (PostgreSQL, MySQL, MongoDB), JWT authentication, real-time sockets, and REST/GraphQL API development.'
+},
+{
+    title: 'Game & Interactive 2D/3D Development',
+    desc: 'Proficient with Unity, understanding physics engines, collision detection, culling, and game object management for smooth 2D/3D experiences.'
+},
+{
+    title: 'Python Automation & DevOps',
+    desc: 'Automation scripts, web scraping, API orchestration, task scheduling, and workflow management using Python and tools like Apache Airflow.'
+},
+{
+    title: 'Business & Freelance Growth',
+    desc: 'Managing freelance accounts, generating leads, writing winning proposals, client negotiation, and building long-term business partnerships for consistent revenue growth.'
+}
 ];
 
 const SkillCard = ({ title, desc }: { title: string, desc: string }) => {

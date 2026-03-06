@@ -25,8 +25,8 @@ export function Hero() {
                                 strings: [
                                     'Freelance Software Engineer',
                                     'Full Stack Web Developer',
-                                    'AI Chatbot Developer',
-                                    'Python Developer',
+                                    'Mobile App Developer',
+                                    'AI and Saas Developer',
                                     'Business Developer'
                                 ],
                                 autoStart: true,
@@ -35,7 +35,7 @@ export function Hero() {
                         />
                     </h2>
                     <p className="max-w-4xl text-xs md:text-base mb-4 leading-loose opacity-75">
-                        Proficient in C/C++, C#, Python, JavaScript, React, Node.js, Express, AI and more. 
+                        Experienced in building robust and scalable software solutions on mobile and web platforms. 
                         Highly adaptable to emerging technologies, I thrive in fast-paced environments and 
                         build innovative, scalable solutions tailored to evolving digital needs.
                     </p>
