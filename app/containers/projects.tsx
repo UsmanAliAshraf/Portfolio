@@ -10,6 +10,7 @@ interface IProject {
     description: string;
     github?: string;
     linkedin?: string;
+    images?: string[]; // for multi-image projects
 }
 
 const projects: IProject[] = [
@@ -20,12 +21,29 @@ const projects: IProject[] = [
     { video: 'miniexcel.mp4', title: 'MiniExcel', description: 'A simplified spreadsheet application inspired by Microsoft Excel. Supports cell editing, formulas, and basic functions to perform calculations. Built using data structures and algorithms to manage cell references and formula evaluation.', github: '#' },
     { video: 'mangodb.mp4', title: 'MangoDB', description:'A custom document database engine built from scratch in Python. Implements core database concepts such as CRUD operations, indexing, transaction handling, and ACID compliance. Includes a simple query language and demonstrates how modern NoSQL databases work internally.', github: 'https://github.com/UsmanAliAshraf/Mini-MongoDB-Flask-App' },
     { video: 'beats.mp4', title: 'Beats Headphones',description: 'Interactive product landing page designed in Figma and developed using ReactJS and TailwindCSS. Focuses on modern UI design, responsive layouts, and smooth visual presentation. Demonstrates frontend skills in translating design concepts into production UI.', github: 'https://github.com/UsmanAliAshraf/LandingPage'},
-    { video: 'cc.mp4', title: 'Campus Connect and Navigation App', description: 'Web application designed to help students navigate the university campus efficiently. Uses graph-based algorithms to determine optimal paths between locations. Also includes event and task management features to help students stay organized.', github: 'https://github.com/UsmanAliAshraf/CampusNavigation-and-EventManager'}    
-];
+    { video: 'cc.mp4', title: 'Campus Connect and Navigation App', description: 'Web application designed to help students navigate the university campus efficiently. Uses graph-based algorithms to determine optimal paths between locations. Also includes event and task management features to help students stay organized.', github: 'https://github.com/UsmanAliAshraf/CampusNavigation-and-EventManager'},    
+{
+    video: 'kisan3.jpg',
+    title: 'Kisan Stock Mobile App',
+    description: 'Developed Kisan Stock mobile App, an agriculture marketplace application that enables farmers and traders to buy and sell crops through a digital platform. The app allows users to list agricultural products, browse available listings, and connect with potential buyers or sellers. It streamlines crop trading by providing a simple and accessible interface for agricultural commerce. The goal was to improve accessibility and transparency in the agricultural supply chain',
+    images: ['kisan1.jpg','kisan2.jpg','kisan3.jpg','kisan4.jpg'],
+    github: '#'
+}];
 
-const ProjectCard = ({ video, title, description, github, linkedin, onClick }: IProject & { onClick: () => void }) => {
+const ProjectCard = ({ video, title, description, github, linkedin, images, onClick }: IProject & { onClick: () => void }) => {
     const videoRef = useRef<HTMLVideoElement>(null);
     const [isPlaying, setIsPlaying] = useState(false);
+    const [imgIndex, setImgIndex] = useState(0);
+
+    useEffect(() => {
+        if (!images) return;
+
+        const interval = setInterval(() => {
+            setImgIndex((prev) => (prev + 1) % images.length);
+        }, 2500);
+
+        return () => clearInterval(interval);
+    }, [images]);
 
     const handlePlay = () => {
         if (videoRef.current) {
@@ -34,6 +52,7 @@ const ProjectCard = ({ video, title, description, github, linkedin, onClick }: I
             setIsPlaying(true);
         }
     };
+
     const handlePause = () => {
         if (videoRef.current) {
             videoRef.current.pause();
@@ -51,7 +70,12 @@ const ProjectCard = ({ video, title, description, github, linkedin, onClick }: I
             tabIndex={0}
             onClick={onClick}
         >
-            {video.endsWith(".mp4") ? (
+            {images ? (
+    <img
+        src={`/projects/${images[imgIndex]}`}
+        className="absolute top-0 left-0 w-full h-full object-contain object-top transition-opacity duration-500"
+    />
+) : video.endsWith(".mp4") ? (
     <video
         ref={videoRef}
         src={`/projects/${video}`}
@@ -135,10 +159,10 @@ export function Projects() {
     />
 ) : (
     <img
-        src={`/projects/${activeProject.video}`}
-        className="w-full rounded-lg mb-4"
-        alt={activeProject.title}
-    />
+    src={`/projects/${activeProject.video}`}
+    className="max-h-[60vh] w-auto mx-auto rounded-lg mb-4 object-contain"
+    alt={activeProject.title}
+/>
 )}
                         <h2 className="text-3xl font-bold mb-2">{activeProject.title}</h2>
                         <p>{activeProject.description}</p>
